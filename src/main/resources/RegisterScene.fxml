@@ -3,8 +3,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -12,9 +10,8 @@
 
 <AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.risk.gui.RegisterController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="720.0" layoutY="-1.0" stroke="WHITE" strokeType="INSIDE" width="1280.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1E6A9FFF" height="350.0" layoutY="148.0" stroke="#1E6A9FFF" strokeType="INSIDE" width="1280.0" />
-      <Text fill="#ffd763" layoutX="293.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="ms_headings" text="Register for Risk" textAlignment="CENTER" wrappingWidth="702.4937133789062">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1E6A9FFF" height="724.0" layoutY="-1.0" stroke="#1E6A9FFF" strokeType="INSIDE" width="1280.0" />
+      <Text fill="#ffd763" layoutX="293.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="ms_headings" text="Register for Risky Monkeys" textAlignment="CENTER" wrappingWidth="702.4937133789062">
          <font>
             <Font name="Berlin Sans FB" size="48.0" />
          </font>
