@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="360.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.risk.gui.ChatController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="360.0" stroke="#ffd763" strokeType="INSIDE" strokeWidth="3.0" width="640.0" />
+      <Pane layoutX="2.0" layoutY="2.0" prefHeight="355.0" prefWidth="200.0" style="-fx-border-width: 2; -fx-background-color: lightslategray;">
+         <children>
+            <Button fx:id="exitChatButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#exitWindow" style="-fx-background-color: ffd763;" text="Exit " />
+         </children>
+      </Pane>
+      <ScrollPane fx:id="spMain" fitToWidth="true " layoutX="252.0" layoutY="43.0" prefHeight="260.0" prefWidth="355.0" style="-fx-hbar-policy: NEVER;">
+         <content>
+            <VBox fx:id="vboxMessages" prefHeight="257.0" prefWidth="354.0" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="245.0" layoutY="4.0" text="Chat with your fellow Players">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="sendMessageButton" layoutX="563.0" layoutY="310.0" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="26.0" style="-fx-background-color: #ffd763;">
+         <graphic>
+            <ImageView fx:id="messageButtonImageView" fitHeight="26.0" fitWidth="28.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pictures/arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextField fx:id="tfMessage" layoutX="307.0" layoutY="310.0" prefHeight="26.0" prefWidth="245.0" promptText="Type message" />
+   </children>
+</AnchorPane>

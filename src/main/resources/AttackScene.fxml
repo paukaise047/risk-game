@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="640.0" style="-fx-background-color: lightslategray;" stylesheets="@applicationStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.risk.gui.GameController">
+   <children>
+      <HBox layoutY="80.0" prefHeight="141.0" prefWidth="618.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="360.0" stroke="#ffd763" strokeType="INSIDE" strokeWidth="3.0" width="640.0" />
+      <Button fx:id="exitAttackSceneButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#exitWindow" style="-fx-background-color: ffd763;" text="Exit " />
+      <Button fx:id="dice" layoutX="258.0" layoutY="292.0" minWidth="63.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="124.0" style="-fx-background-color: #ffd763; -fx-font-size: 14px; -fx-background-radius: 100; -fx-font-family: &quot;Berlin Sans FB&quot;;" text="Roll the dice" />
+      <ImageView fx:id="ivAttackScene" fitHeight="26.0" fitWidth="36.0" layoutX="306.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/dice_png.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="41.0" layoutY="51.0" prefHeight="206.0" prefWidth="557.0" style="-fx-background-color: white; -fx-background-radius: 15px; -fx-border-color: #ffd763; -fx-border-radius: 12px; -fx-border-width: 3px;">
+         <children>
+            <ImageView fitHeight="103.0" fitWidth="187.0" layoutX="185.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pictures/banana_monkey.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="223.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Berlin Sans FB&quot;;" text="VS." textAlignment="CENTER" wrappingWidth="110.06129455566406">
+               <font>
+                  <Font name="DIN Alternate Bold" size="57.0" />
+               </font>
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+            </Text>
+            <Label fx:id="youLabel" alignment="CENTER" layoutX="6.0" layoutY="12.0" prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: &quot;Berlin Sans FB&quot;; -fx-font-size: 21px;" text="You" />
+            <Label fx:id="opponentLabel" alignment="CENTER" layoutX="349.0" layoutY="13.0" prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: &quot;Berlin Sans FB&quot;; -fx-font-size: 21px;" text="Opponent" />
+            <Button fx:id="CirclePlayer" layoutX="46.0" layoutY="47.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: orange; -fx-border-color: #000; -fx-background-radius: 100; -fx-border-radius: 100; -fx-pref-height: 120; -fx-pref-height: 120; -fx-max-height: 120; -fx-min-height: 120; -fx-min-width: 120; max-wid: 120;">
+               <graphic>
+                  <ImageView fx:id="ivPlayer" fitHeight="106.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/player1pb.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="circleEnemy" layoutX="389.0" layoutY="47.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: orange; -fx-background-radius: 100; -fx-border-color: #000; -fx-border-radius: 100; -fx-min-height: 120; -fx-max-height: 120; -fx-min-width: 120; -fx-max-width: 120;">
+               <graphic>
+                  <ImageView fx:id="ivEnemy" fitHeight="106.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/player1pb.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <StackPane layoutX="427.0" layoutY="154.0" prefHeight="46.0" prefWidth="44.0">
+               <children>
+                  <Circle fill="WHITE" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Text fx:id="defendingTroopsCount" strokeType="OUTSIDE" strokeWidth="0.0" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="84.0" layoutY="154.0" prefHeight="46.0" prefWidth="44.0">
+               <children>
+                  <Circle fill="WHITE" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Text fx:id="attackingTroopsCount" strokeType="OUTSIDE" strokeWidth="0.0" />
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="103.0" layoutY="287.0">
+         <children>
+            <Button fx:id="plus" layoutX="57.0" layoutY="3.0" maxHeight="20.0" maxWidth="20.0" mnemonicParsing="false" onAction="#increaseNumberOfTroops" prefHeight="15.0" prefWidth="15.0" style="-fx-background-color: white; -fx-border-color: black; -fx-background-radius: 7; -fx-border-radius: 7; -fx-border-width: 1; -fx-border-insets: -1;">
+               <graphic>
+                  <ImageView fitHeight="10.0" fitWidth="10.0" layoutX="134.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/plus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="Plus1" layoutX="57.0" layoutY="30.0" mnemonicParsing="false" onAction="#decreaseNumberOfTroops" prefHeight="15.0" prefWidth="15.0" style="-fx-background-color: white; -fx-border-color: black; -fx-background-radius: 7; -fx-border-radius: 7; -fx-border-width: 1; -fx-border-insets: -1;">
+               <graphic>
+                  <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/minus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="numberOfTroops" alignment="CENTER" minHeight="32.0" minWidth="27.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-border-radius: 50px; -fx-background-radius: 50px; -fx-border-color: #000; -fx-font-family: &quot;Berlin Sans FB&quot;; -fx-font-size: 21;" text="1" />
+            <Button fx:id="maxAttackingTroops" layoutX="3.0" layoutY="39.0" mnemonicParsing="false" onAction="#setMaxAttackingTroops" prefHeight="15.0" prefWidth="44.0" style="-fx-background-color: #ffd763; -fx-background-radius: 100; -fx-font-family: &quot;Berlin Sans FB&quot;; -fx-font-size: 10px;" text="max">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="64.0" layoutY="267.0" style="-fx-font-family: &quot;Berlin Sans FB&quot;; -fx-font-size: 14px;" text="Select the number of troops!" />
+      <AnchorPane fx:id="resultPane" layoutX="41.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="303.0" prefWidth="557.0" style="-fx-background-color: lightslategray;" stylesheets="@applicationStyle.css" visible="false">
+         <children>
+            <AnchorPane prefHeight="206.0" prefWidth="557.0" style="-fx-background-color: #0042A9; -fx-background-radius: 15px; -fx-border-color: #ffd763; -fx-border-radius: 12px; -fx-border-width: 3px;">
+               <children>
+                  <VBox alignment="CENTER" layoutX="11.0" layoutY="6.0" prefHeight="200.0" prefWidth="535.0">
+                     <children>
+                        <Label fx:id="defeatedLabel" style="-fx-font-family: &quot;Berlin Sans FB&quot;; -fx-font-size: 32px; -fx-text-fill: #ffd763;" text="You defeated 88 armies.">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="lostLabel" style="-fx-font-family: &quot;Berlin Sans FB&quot;; -fx-font-size: 32px; -fx-text-fill: #ffd763;" text="You lost 88 armies.">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="5.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/banana_monkey.png" /> <!-- TODO check image -->
+                     </image>
+                  </ImageView>
+                  <Circle fill="WHITE" layoutX="494.0" layoutY="100.0" radius="12.0" stroke="WHITE" strokeType="INSIDE" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="455.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/banana_monkey.png" /> <!-- TODO check image -->
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
