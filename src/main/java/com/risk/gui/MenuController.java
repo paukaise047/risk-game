@@ -58,7 +58,7 @@ public class MenuController implements Initializable {
    */
   @FXML
   protected void switchToOptionsScene(ActionEvent event) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("/OptionsScene.fxml"));
+    Parent root = FXMLLoader.load(getClass().getResource("/SettingsScene.fxml"));
     stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
     scene = new Scene(root);
     stage.setScene(scene);
