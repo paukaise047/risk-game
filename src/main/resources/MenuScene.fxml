@@ -10,8 +10,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.risk.gui.MenuController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="720.0" stroke="WHITE" strokeType="INSIDE" width="1280.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1E6A9FFF" height="720.0" stroke="#1E6A9FFF" strokeType="INSIDE" width="550.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1E6A9FFF" height="720.0" stroke="#1E6A9FFF" strokeType="INSIDE" width="642.0" />
       <Button fx:id="startGameButton" layoutX="120.0" layoutY="275.0" mnemonicParsing="false" onAction="#switchToLobbyScene" prefHeight="50.0" prefWidth="300.0" styleClass="ms_buttons_normal" stylesheets="@applicationStyle.css" text="Play risk" />
       <Text fill="#ffd763" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="ms_headings" text="Risky Monkeys" textAlignment="CENTER" wrappingWidth="550.0">
          <font>
@@ -27,7 +26,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="tutorialButton" layoutX="652.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToTutorialScene" styleClass="square_button" stylesheets="@applicationStyle.css">
+      <Button fx:id="tutorialButton" layoutX="838.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToTutorialScene" styleClass="square_button" stylesheets="@applicationStyle.css">
          <graphic>
             <ImageView fitHeight="45.0" fitWidth="43.0" layoutX="-339.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" styleClass="buttons_options">
                <image>
@@ -36,17 +35,17 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="settingsButton" layoutX="852.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToOptionsScene" styleClass="square_button" stylesheets="@applicationStyle.css">
+      <Button fx:id="settingsButton" layoutX="1038.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToOptionsScene" styleClass="square_button" stylesheets="@applicationStyle.css">
          <graphic>
-            <ImageView fitHeight="41.0" fitWidth="39.0" layoutX="-337.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="buttons_options">
+            <ImageView fitHeight="45.0" fitWidth="43.0" layoutX="-337.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="buttons_options">
                <image>
                   <Image url="@pictures/settings.png" />
                </image>
             </ImageView>
          </graphic></Button>
-      <Button fx:id="playerStatisticsButton" layoutX="752.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToPlayerStatisticsScene" styleClass="square_button" stylesheets="@applicationStyle.css">
+      <Button fx:id="playerStatisticsButton" layoutX="938.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToPlayerStatisticsScene" styleClass="square_button" stylesheets="@applicationStyle.css">
          <graphic>
-            <ImageView fitHeight="43.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="buttons_options">
+            <ImageView fitHeight="45.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" styleClass="buttons_options">
                <image>
                   <Image url="@pictures/statistic.png" />
                </image>
