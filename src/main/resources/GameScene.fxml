@@ -951,15 +951,14 @@
                            </font>
                         </Text>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="290.0" layoutY="70.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" width="720.0" />
-                        <AnchorPane layoutX="14.0" layoutY="132.0">
+                        <AnchorPane layoutX="14.0" layoutY="100.0">
                            <children>
-                              <ImageView fx:id="ivAlertScene1" fitHeight="213.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="ivAlertScene1" fitHeight="250.0" fitWidth="190.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@pictures/talking_monkey.png" />
                                  </image>
                               </ImageView>
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eed79d" height="72.0" layoutX="36.76829528808594" layoutY="27.43535614013672" rotate="-2.0" stroke="#ffffff00" strokeType="INSIDE" strokeWidth="3.0" width="81.0" />
-                              <Label fx:id="eloLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="41.0" layoutY="30.0" prefHeight="67.0" prefWidth="77.0" style="-fx-font-family: &quot;Berlin Sans FB&quot;; -fx-font-size: 16px;" text="You won &#10;XX &#10;elo points." textAlignment="CENTER" wrapText="true" />
+                              <Label fx:id="eloLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="83.0" layoutY="-8.0" prefHeight="67.0" prefWidth="77.0" style="-fx-font-family: &quot;Berlin Sans FB&quot;; -fx-font-size: 14px;" text="You won XX&#10;elo points." textAlignment="CENTER" wrapText="true" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="260.0" layoutY="100.0" prefHeight="229.0" prefWidth="186.0">
