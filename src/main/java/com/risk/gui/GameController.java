@@ -2574,7 +2574,7 @@ public class GameController implements Initializable {
 
     int gainedPoints = (int) (position * 10 * scoreFactor);
 
-    eloLabel.setText("You gained\n" + String.valueOf(gainedPoints) + "\n points.");
+    eloLabel.setText("You gained\n" + String.valueOf(gainedPoints) + " points.");
     String str = winner.getName();
     if (str.contains("(Easy)")) {
       str = str.replace("(Easy)", "");
