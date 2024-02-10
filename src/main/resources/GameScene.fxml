@@ -78,7 +78,7 @@
                         </ImageView>
                         <ImageView fitHeight="18.0" fitWidth="25.0" layoutX="8.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@pictures/mapGame.png" />
+                              <Image url="@pictures/map_game.png" />
                            </image>
                         </ImageView>
                         <Text fx:id="player1TroopCount" layoutX="25.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="23.029977281419633" />
@@ -94,7 +94,7 @@
                         </ImageView>
                         <ImageView fitHeight="18.0" fitWidth="25.0" layoutX="8.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@pictures/mapGame.png" />
+                              <Image url="@pictures/map_game.png" />
                            </image>
                         </ImageView>
                         <Text fx:id="player2TroopCount" layoutX="25.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="23.029977281419633" />
@@ -110,7 +110,7 @@
                         </ImageView>
                         <ImageView fitHeight="18.0" fitWidth="25.0" layoutX="8.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@pictures/mapGame.png" />
+                              <Image url="@pictures/map_game.png" />
                            </image>
                         </ImageView>
                         <Text fx:id="player3TroopCount" layoutX="25.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="23.029977281419633" />
@@ -126,7 +126,7 @@
                         </ImageView>
                         <ImageView fitHeight="18.0" fitWidth="25.0" layoutX="8.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@pictures/mapGame.png" />
+                              <Image url="@pictures/map_game.png" />
                            </image>
                         </ImageView>
                         <Text fx:id="player4TroopCount" layoutX="25.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="23.029977281419633" />
@@ -142,7 +142,7 @@
                         </ImageView>
                         <ImageView fitHeight="18.0" fitWidth="25.0" layoutX="8.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@pictures/mapGame.png" />
+                              <Image url="@pictures/map_game.png" />
                            </image>
                         </ImageView>
                         <Text fx:id="player5TroopCount" layoutX="25.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="23.029977281419633" />
@@ -158,7 +158,7 @@
                         </ImageView>
                         <ImageView fitHeight="18.0" fitWidth="25.0" layoutX="8.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@pictures/mapGame.png" />
+                              <Image url="@pictures/map_game.png" />
                            </image>
                         </ImageView>
                         <Text fx:id="player6TroopCount" layoutX="25.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="23.029977281419633" />
@@ -179,7 +179,7 @@
                      <graphic>
                         <ImageView fitHeight="43.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="buttons_options">
                            <image>
-                              <Image url="@pictures/tradeCardIcon.png" />
+                              <Image url="@pictures/trade_cards_icon.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -215,7 +215,7 @@
                <graphic>
                   <ImageView fx:id="chatButtonIcon" fitHeight="44.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@pictures/chatIcon.png" />
+                        <Image url="@pictures/chat_icon.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -308,7 +308,7 @@
                <graphic>
                   <ImageView fx:id="chatButtonIcon1" fitHeight="41.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@pictures/exitGameButton.png" />
+                        <Image url="@pictures/exit_game_button.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -833,7 +833,7 @@
                         <Button fx:id="moveTroopsConfirm" layoutX="8.0" layoutY="7.0" mnemonicParsing="false" onAction="#confirmMovingTroops" prefHeight="45.0" prefWidth="52.0" style="-fx-background-color: #ffd763; -fx-background-radius: 12; -fx-border-radius: 12; -fx-pref-height: 25; -fx-pref-width: 100;" text="Confirm" />
                         <ImageView fx:id="diceImageView" fitHeight="25.0" fitWidth="40.0" layoutX="45.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true" visible="false">
                            <image>
-                              <Image url="@pictures/dice_png.png" />
+                              <Image url="@pictures/dice.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -901,7 +901,7 @@
                         <Button fx:id="tradeCardsButton" disable="true" layoutX="209.0" layoutY="290.0" minWidth="63.0" mnemonicParsing="false" onAction="#tradedInCards" prefHeight="50.0" prefWidth="224.0" style="-fx-background-color: #ffd763; -fx-font-size: 14px; -fx-background-radius: 100;" text="No Matching Cards" />
                         <ImageView fx:id="ivTradeCardScene" fitHeight="26.0" fitWidth="36.0" layoutX="308.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@pictures/tradeCardIcon.png" />
+                              <Image url="@pictures/trade_cards_icon.png" />
                            </image>
                         </ImageView>
                      </children>

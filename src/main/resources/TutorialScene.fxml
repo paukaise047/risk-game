@@ -79,7 +79,7 @@
                                         </ImageView>
                                         <ImageView fitHeight="18.0" fitWidth="25.0" layoutX="8.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@pictures/mapGame.png" />
+                                                <Image url="@pictures/map_game.png" />
                                             </image>
                                         </ImageView>
                                         <Text fx:id="player1TroopCount" layoutX="25.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="23.029977281419633" />
@@ -95,7 +95,7 @@
                                         </ImageView>
                                         <ImageView fitHeight="18.0" fitWidth="25.0" layoutX="8.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@pictures/mapGame.png" />
+                                                <Image url="@pictures/map_game.png" />
                                             </image>
                                         </ImageView>
                                         <Text fx:id="player2TroopCount" layoutX="25.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="23.029977281419633" />
@@ -144,7 +144,7 @@
                             <graphic>
                                 <ImageView fx:id="chatButtonIcon" fitHeight="44.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@pictures/chatIcon.png" />
+                                        <Image url="@pictures/chat_icon.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -651,7 +651,7 @@
                             <children>
                                 <ImageView fx:id="speechBubbleImage" fitHeight="600.0" fitWidth="876.0" layoutX="200.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@pictures/speech-balloon_big.png" />
+                                        <Image url="@pictures/speech_balloon.png" />
                                     </image>
                                 </ImageView>
                                 <Text fx:id="tutText1" layoutX="275.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Greetings, fellow Soldiers! Welcome to the world of Risk, where bananas and strategy go hand-in-hand. Now, before we dive into the tutorial, let's chat about what this game is all about." textAlignment="CENTER" wrappingWidth="564.4039306640625">
@@ -661,7 +661,7 @@
                                 </Text>
                                 <ImageView fx:id="redArrowGif" fitHeight="91.0" fitWidth="80.0" layoutX="24.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" visible="false">
                                     <image>
-                                        <Image url="@pictures/redArrowGif.gif" />
+                                        <Image url="@pictures/red_arrow.gif" />
                                     </image>
                                 </ImageView>
                             </children>
@@ -729,7 +729,7 @@
             <graphic>
                 <ImageView fx:id="chatButtonIcon11" fitHeight="41.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@pictures/exitGameButton.png" />
+                        <Image url="@pictures/exit_game_button.png" />
                     </image>
                 </ImageView>
             </graphic>
@@ -763,7 +763,7 @@
                         <Button fx:id="tradeCardsButton" disable="true" layoutX="209.0" layoutY="290.0" minWidth="63.0" mnemonicParsing="false" onAction="#tradedInCards" prefHeight="50.0" prefWidth="224.0" style="-fx-background-color: #ffd763; -fx-font-size: 14px; -fx-background-radius: 100;" text="No Matching Cards" />
                         <ImageView fx:id="ivTradeCardScene" fitHeight="26.0" fitWidth="36.0" layoutX="308.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@pictures/tradeCardIcon.png" />
+                              <Image url="@pictures/trade_cards_icon.png" />
                            </image>
                         </ImageView>
                      </children>

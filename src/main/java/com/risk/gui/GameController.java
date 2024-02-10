@@ -22,7 +22,6 @@ import java.util.Set;
 import javafx.animation.KeyFrame;
 import javafx.animation.PauseTransition;
 import javafx.animation.Timeline;
-import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -95,7 +94,7 @@ public class GameController implements Initializable {
   };
   int[] playerCountriesOwned = new int[6];
   int[] playerTroopsCount = new int[6];
-  Image cursorImage = new Image("pictures/cursorImage.png"); //TODO add cursor image
+  Image cursorImage = new Image("pictures/cursor.png"); //TODO add cursor image
   Cursor cursor = new ImageCursor(cursorImage);
   @FXML
   Button exitJustShowCardsPane;
@@ -1208,11 +1207,11 @@ public class GameController implements Initializable {
   }
 
   /**
-   * This method unpresses all CountryButtons.
+   * This method deselects all CountryButtons.
    *
    * @author lkuech
    */
-  public void unpressAllCountryButtons() {
+  public void deselectAllCountryButtons() {
     if (countryButtons != null) {
       for (SVGPath c : countryButtons) {
         if (c != null) {
@@ -1261,7 +1260,7 @@ public class GameController implements Initializable {
   }
 
   /**
-   * This method returns the CountryButton by comparing the Id of the Button with the Name of the
+   * This method returns the CountryButton by comparing the ID of the Button with the Name of the
    * Country.
    *
    * @param country - The country which button should be returned.
@@ -1596,7 +1595,7 @@ public class GameController implements Initializable {
     }
     this.selectedCountry1 = null;
     deactivateAllCountryButtons();
-    unpressAllCountryButtons();
+    deselectAllCountryButtons();
 
     return selectedCountry;
   }
@@ -1676,7 +1675,7 @@ public class GameController implements Initializable {
     this.selectedCountry1 = null;
     this.selectedCountry2 = null;
     deactivateAllCountryButtons();
-    unpressAllCountryButtons();
+    deselectAllCountryButtons();
 
     return move;
   }
@@ -1722,7 +1721,7 @@ public class GameController implements Initializable {
     this.selectedCountry1 = null;
     this.selectedCountry2 = null;
     deactivateAllCountryButtons();
-    unpressAllCountryButtons();
+    deselectAllCountryButtons();
     return new Placement(selectedCountry, troopsPlaced);
   }
 
@@ -1738,12 +1737,12 @@ public class GameController implements Initializable {
    */
   private void showDice(int i) {
     Image[] images = {
-        new Image("pictures/dice-1.png"),
-        new Image("pictures/dice-2.png"),
-        new Image("pictures/dice-3.png"),
-        new Image("pictures/dice-4.png"),
-        new Image("pictures/dice-5.png"),
-        new Image("pictures/dice-6.png")
+        new Image("pictures/dice_1.png"),
+        new Image("pictures/dice_2.png"),
+        new Image("pictures/dice_3.png"),
+        new Image("pictures/dice_4.png"),
+        new Image("pictures/dice_5.png"),
+        new Image("pictures/dice_6.png")
     };
     ImageView imageView = diceImage;
     Timeline timeline =
@@ -1972,11 +1971,10 @@ public class GameController implements Initializable {
 
     this.maxTroopsToDistribute = maxTroops;
 
-    // ein Text-Knoten in einem anderen Elternknoten
     Text textNode = getTroopsInCountryTextByCountry(toCountry);
     double otherButtonSceneX = textNode.localToScene(textNode.getBoundsInLocal()).getMinX();
     double otherButtonSceneY = textNode.localToScene(textNode.getBoundsInLocal()).getMinY();
-    Parent commonParent = getCommonParent(moveTroopsPane, textNode); // gemeinsamer Elternknoten
+    Parent commonParent = getCommonParent(moveTroopsPane, textNode);
     double moveTroopsPaneParentX =
         commonParent.sceneToLocal(otherButtonSceneX, otherButtonSceneY).getX();
     double moveTroopsPaneParentY =
@@ -2135,45 +2133,45 @@ public class GameController implements Initializable {
               getButtonByCountry(country).getFill();
               changeBackgroundColor(country);
               removeCountryBorder(getButtonByCountry(country));
-              Text trooptxt = getTextByCountry(country);
+              Text troopText = getTextByCountry(country);
               String newCountryText = "" + country.getTroops();
               boolean attCountry = false;
               boolean defCountry = false;
               if (gameState.getLastAttackingCountry() != null) {
-                if (trooptxt.equals(
+                if (troopText.equals(
                     getTroopsInCountryTextByCountry(
                         gameState.getCountryByName(gameState.getLastAttackingCountry())))) {
                   attCountry = true;
                 }
               }
               if (gameState.getLastDefendingCountry() != null) {
-                if (trooptxt.equals(
+                if (troopText.equals(
                     getTroopsInCountryTextByCountry(
                         gameState.getCountryByName(gameState.getLastDefendingCountry())))) {
                   defCountry = true;
                 }
               }
 
-              if (!trooptxt.getText().equals(newCountryText) || attCountry || defCountry) {
+              if (!troopText.getText().equals(newCountryText) || attCountry || defCountry) {
                 if (!gameState.getCurrentPlayerKey().equals(user.getPlayer())) { // &&
-                  trooptxt.setText(newCountryText);
-                  trooptxt.setFill(javafx.scene.paint.Color.BLACK);
-                  trooptxt.setFont(Font.font(Font.getDefault().getFamily(), FontWeight.NORMAL, 12));
+                  troopText.setText(newCountryText);
+                  troopText.setFill(javafx.scene.paint.Color.BLACK);
+                  troopText.setFont(Font.font(Font.getDefault().getFamily(), FontWeight.NORMAL, 12));
                   new Thread(
                       () -> {
                         try {
                           Platform.runLater(
                               () -> {
-                                trooptxt.setFill(javafx.scene.paint.Color.BLACK);
-                                trooptxt.setFont(
+                                troopText.setFill(javafx.scene.paint.Color.BLACK);
+                                troopText.setFont(
                                     Font.font("Berlin Sans FB", FontWeight.BOLD, 20));
                               });
                           Thread.sleep(1000);
                           Platform.runLater(
                               () -> {
-                                trooptxt.setText(String.valueOf(newCountryText));
-                                trooptxt.setFill(javafx.scene.paint.Color.BLACK);
-                                trooptxt.setFont(
+                                troopText.setText(String.valueOf(newCountryText));
+                                troopText.setFill(javafx.scene.paint.Color.BLACK);
+                                troopText.setFont(
                                     Font.font("Berlin Sans FB", FontWeight.NORMAL, 12));
                               });
                         } catch (InterruptedException e) {
@@ -2182,7 +2180,7 @@ public class GameController implements Initializable {
                       })
                       .start();
                 } else {
-                  trooptxt.setText(newCountryText);
+                  troopText.setText(newCountryText);
                 }
               }
             }

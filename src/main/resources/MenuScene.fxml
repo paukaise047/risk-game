@@ -26,7 +26,7 @@
          <graphic>
             <ImageView fx:id="logoutButtonView" fitHeight="41.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" styleClass="buttons_options">
                <image>
-                  <Image url="@pictures/exitGameButton.png" />
+                  <Image url="@pictures/exit_game_button.png" />
                </image>
             </ImageView>
          </graphic>
