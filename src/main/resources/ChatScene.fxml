@@ -17,6 +17,11 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="360.0" stroke="#ffd763" strokeType="INSIDE" strokeWidth="3.0" width="640.0" />
       <Pane layoutX="2.0" layoutY="2.0" prefHeight="355.0" prefWidth="200.0" style="-fx-border-width: 2; -fx-background-color: lightslategray;">
          <children>
+            <ImageView fitHeight="203.0" fitWidth="245.0" layoutX="14.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pictures/tutorial_monkey.png" />
+               </image>
+            </ImageView>
             <Button fx:id="exitChatButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#exitWindow" style="-fx-background-color: ffd763;" text="Exit " />
          </children>
       </Pane>
