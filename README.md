@@ -38,7 +38,7 @@ The network package contains the code for multiplayer games via the network. Thi
 As this was a group-project, I don't take credit for all of the code. My main topics were the Client-Server architecture, the game logic, the database connection, and the final main integration of all parts. Since the original repository has been deleted and I had to manually insert our code into this repository, I couldn't preserve the actual contributions.  
 The other authors are:
 - Hannes Neumann
-- Leonard Küch (@leonardkuech)
+- Leonard Küch ([@leonardkuech](https://github.com/leonardkuech))
 - Lukas Greiner
 - Paul Kaiser
 - Valentin Stoll
