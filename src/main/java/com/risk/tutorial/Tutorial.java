@@ -5,7 +5,6 @@ import com.risk.gui.TutorialSceneController;
 import com.risk.objects.Country;
 import com.risk.objects.Player;
 import com.risk.util.exceptions.IntegerNotPositiveException;
-import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -22,13 +21,6 @@ public class Tutorial {
 
   private Player tutorialPlayerHard;
 
-  /**
-   * This method closes the tradeInCardsPane.
-   *
-   * @param event - The event that is triggered when the user clicks on the "exit" button.
-   * @throws IOException - Throws an IOException if the FXML file can't be found.
-   * @author vstoll.
-   */
 
   /**
    * This method creates a tutorial game with its own gameState and controller.
@@ -67,7 +59,6 @@ public class Tutorial {
    * This method sets the owner of a country to the tutorialPlayerHard.
    *
    * @param countryName the name of the country that should be set to the tutorialPlayerHard.
-   * @throws IntegerNotPositiveException if the number of troops is not positive.
    * @author lgreiner.
    */
   public void setCountryOwnerHard(String countryName) {
@@ -76,6 +67,7 @@ public class Tutorial {
     try {
       country.setTroops(1);
     } catch (IntegerNotPositiveException e) {
+      // ignore
     }
     gui.paintGUI(tutorialGameState);
   }
@@ -84,7 +76,6 @@ public class Tutorial {
    * This method sets the owner of a country to the tutorialPlayerEasy.
    *
    * @param countryName the name of the country that should be set to the tutorialPlayerEasy.
-   * @throws IntegerNotPositiveException if the number of troops is not positive.
    * @author lgreiner.
    */
   public void setCountryOwnerEasy(String countryName) {
@@ -93,6 +84,7 @@ public class Tutorial {
     try {
       country.setTroops(1);
     } catch (IntegerNotPositiveException e) {
+      // ignore
     }
     gui.paintGUI(tutorialGameState);
   }
@@ -102,7 +94,6 @@ public class Tutorial {
    *
    * @param countryName the name of the country in which the number of troops should be set.
    * @param troops the number of troops that should be set.
-   * @throws IntegerNotPositiveException if the number of troops is not positive.
    * @author lgreiner.
    */
   public void setTroops(String countryName, int troops) {
@@ -110,6 +101,7 @@ public class Tutorial {
     try {
       country.setTroops(troops);
     } catch (IntegerNotPositiveException e) {
+      // ignore
     }
     gui.paintGUI(tutorialGameState);
   }

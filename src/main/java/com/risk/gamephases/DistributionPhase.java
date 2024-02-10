@@ -25,8 +25,6 @@ public class DistributionPhase extends Phase {
    * @author floribau
    */
   public DistributionPhase(String player, ArrayList<Country> unownedCountries) {
-    // Todo delete sout
-
     this.player = player;
     this.unownedCountries.addAll(unownedCountries);
     computeSelectableCountries();

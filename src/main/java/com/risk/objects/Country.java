@@ -102,7 +102,7 @@ public class Country implements Serializable {
   /**
    * Method called when updating troop count of a country.
    *
-   * @param troops to be added or substracted, can be positive or negative.
+   * @param troops to be added or subtracted, can be positive or negative.
    * @throws TroopsOverLimitException if troops goes below 0 after updating.
    * @author floribau.
    */
@@ -138,7 +138,7 @@ public class Country implements Serializable {
    * checks if given country is neighbour of this country.
    *
    * @param country to check.
-   * @return true if the countries are neigbours.
+   * @return true if the countries are neighbours.
    * @author floribau.
    */
   public boolean isNeighbour(Country country) {

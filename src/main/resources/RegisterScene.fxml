@@ -29,6 +29,6 @@
          </font>
       </Text>
       <Button layoutX="644.0" layoutY="416.0" maxWidth="270.0" minWidth="127.0" mnemonicParsing="false" onAction="#registerAndSwitchToLoginScene" prefHeight="26.0" prefWidth="135.0" styleClass="ls_buttons_normal" stylesheets="@applicationStyle.css" text="Register" />
-      <Button layoutX="505.0" layoutY="416.0" maxWidth="270.0" mnemonicParsing="false" onAction="#switchtoLoginScene" prefHeight="26.0" prefWidth="135.0" styleClass="ls_buttons_normal" stylesheets="@applicationStyle.css" text="Back to Login-Page" />
+      <Button layoutX="505.0" layoutY="416.0" maxWidth="270.0" mnemonicParsing="false" onAction="#switchToLoginScene" prefHeight="26.0" prefWidth="135.0" styleClass="ls_buttons_normal" stylesheets="@applicationStyle.css" text="Back to Login-Page" />
    </children>
 </AnchorPane>

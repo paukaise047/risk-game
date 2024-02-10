@@ -82,7 +82,6 @@ public class AiPlayer extends Player {
         double distributionThreshold = 0.7;
         if (gameState.getContinentCaptureRate("Australia") < distributionThreshold) {
           if (gameState.getCountryByName("Indonesia").getOwner() == null) {
-            //TODO souts entfernen
             return gameState.getCountryByName("Indonesia");
           } else {
             for (Country country :
@@ -167,13 +166,16 @@ public class AiPlayer extends Player {
    */
   public Country distributeRandomCountry(GameState gameState) {
     List<Country> countries = gameState.getUnownedCountries();
-    if (countries.size() == 0 && countries != null) {
-      int rdm = (int) (Math.random() * gameState.getCountriesOwnedByPlayer(this.getUserKey())
-          .size());
-      return gameState.getCountriesOwnedByPlayer(this.getUserKey()).get(rdm);
+    if(countries != null) {
+      if (countries.size() == 0) {
+        int rdm = (int) (Math.random() * gameState.getCountriesOwnedByPlayer(this.getUserKey())
+            .size());
+        return gameState.getCountriesOwnedByPlayer(this.getUserKey()).get(rdm);
+      }
+      int random = (int) (Math.random() * countries.size());
+      return countries.get(random);
     }
-    int random = (int) (Math.random() * countries.size());
-    return countries.get(random);
+    return null;
   }
 
   /**
@@ -268,10 +270,10 @@ public class AiPlayer extends Player {
     });
     try {
       GameState gs = gameState.cloneGameState();
-      //berechnen von nbsr für jedes Land
+      // calculate nbsr for every country
       for (Country country : gameState.getCountriesOwnedByPlayer(this.getUserKey())) {
         double nbsr = BorderSecurity.normalizedBorderSecurityRatio(country, gs);
-        countryProbs.put(country, nbsr);  //countryProbs ist eine Map mit Ländern und deren nbsr
+        countryProbs.put(country, nbsr);  // map with every country and their nbsr
       }
       for (Country country :
           countryProbs.keySet()) {
@@ -311,7 +313,7 @@ public class AiPlayer extends Player {
         gameState.getCountriesOwnedByPlayer(this.getUserKey())) {
       for (Country n :
           c.getNeighboursWithSameOwner()) {
-        if (n.getOwner().equals(this) && c.getTroops() > 1) {
+        if (n.getOwner().equals(this.getUserKey()) && c.getTroops() > 1) {
           result = gameState.cloneGameState();
           result.moveTroops(c, n);
           tree.getRoot().addChildren(new Node(result, tree.getRoot(), 1, c, n));

@@ -4,7 +4,7 @@ import com.risk.game.GameState;
 import com.risk.objects.Country;
 
 /**
- * This class is used to calculate the heuristic values for the nodes. These heurisitcs help us to
+ * This class is used to calculate the heuristic values for the nodes. These heuristics help us to
  * evaluate a node resulting from a move.
  *
  * @author hneumann
@@ -71,7 +71,7 @@ public class AttackHeuristics {
   }
 
   /**
-   * Heurisitc 4 evaluates how connected the countries the ai player owns are. For each country we
+   * Heuristic 4 evaluates how connected the countries the AI player owns are. For each country we
    * calculate the ratio of neighbour countries owned to existing neighbour countries. Then we take
    * the average of these ratios, the closer to 1 it gets, the more countries owned by the AIPlayer
    * are neighbours. Since in the game of risk it is important to own connected areas, because you
@@ -104,7 +104,7 @@ public class AttackHeuristics {
    * @param gameState gameState after the move
    * @return Indicator to evaluate the result of an attack.
    */
-  public static double calcDistributionIndikator(GameState gameState) {
+  public static double calcDistributionIndicator(GameState gameState) {
 
     double sum = 0.0;
     int count = 0;

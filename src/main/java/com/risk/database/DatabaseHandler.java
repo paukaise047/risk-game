@@ -166,7 +166,7 @@ public class DatabaseHandler extends Database {
    * @param newUsername - new username to set in db
    * @author lkuech
    */
-  public void changeUsernamedInDb(String username, String newUsername) {
+  public void changeUsernameInDb(String username, String newUsername) {
     try (Statement stmt = connection.createStatement()) {
 
       String sql =
@@ -332,15 +332,15 @@ public class DatabaseHandler extends Database {
   }
 
   /**
-   * This method updates the database with the new scores and elos of the players.
+   * This method updates the database with the new score and elo of the players.
    *
-   * @param gameState the result gamestate
+   * @param gameState the result gameState
    * @author lkuech
    */
   public void updateUsers(GameState gameState) {
     List<Player> players = gameState.getPlayers();
     for (Player player : players) {
-      if (!player.isAiplayer()) {
+      if (!player.isAIPlayer()) {
         try {
           String sql = "SELECT * FROM Player WHERE username = \"" + player.getName() + "\"";
           Statement statement = connection.createStatement();

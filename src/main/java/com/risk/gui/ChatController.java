@@ -307,7 +307,7 @@ public class ChatController implements Initializable {
 
                     vboxMessages.getChildren().add(hbox);
 
-                    // Nachricht wird gesendet
+                    // Message is being sent
                     chatClient.sendMessage(
                         new ChatMessage(messageToSend, user.getUsername(), LocalTime.now()));
                     // chatClient.sendMessage(user.getUsername() + ": " + messageToSend);

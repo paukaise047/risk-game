@@ -10,7 +10,7 @@ import com.risk.objects.Player;
 import com.risk.util.exceptions.UserAlreadyContainsClientException;
 
 /**
- * This class represents a user. It contains the username, the userkey, the client, the server, the
+ * This class represents a user. It contains the username, the userKey, the client, the server, the
  * elo and the chatController. Most importantly it contains the static user object that is used to
  * access the user from anywhere in the program. This is mostly used to access the user from the
  * GameController class.
@@ -37,7 +37,7 @@ public class User {
   private ChatController chatController;
 
   /**
-   * This method returns a userKey. The userkey is a random String that is used to identify the user
+   * This method returns a userKey. The userKey is a random String that is used to identify the user
    * since the username can be duplicated.
    *
    * @return String The userKey of the user as a String.
@@ -98,7 +98,7 @@ public class User {
   }
 
   /**
-   * This method is used to add a client to the user. It calles the constructor of the client class
+   * This method is used to add a client to the user. It calls the constructor of the client class
    * and passes the IP address and port of a server and a userKey and username to it.
    *
    * @param ipAddress The IP address of the server.

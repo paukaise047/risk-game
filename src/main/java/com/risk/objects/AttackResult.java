@@ -4,7 +4,7 @@ import com.risk.objects.dice.AttackRoll;
 import com.risk.objects.dice.DefenseRoll;
 
 /**
- * This class represents the outcome of one attack. Therefore it calculates the lost troops on both
+ * This class represents the outcome of one attack. Therefore, it calculates the lost troops on both
  * sides.
  *
  * @author lkuech.
@@ -20,7 +20,7 @@ public class AttackResult {
    * @param attackRoll This constructor creates a new instance of AttackResult, therefore comparing.
    * @param defenseRoll This constructor creates a new instance of AttackResult, therefore comparing
    *     outcomes of attackRoll and defenseRoll. Then it determines the lost troops for each side by
-   *     comparing first and if possible second highest rolls on both sides.
+   *     comparing first and if possible second-highest rolls on both sides.
    * @author lkuech
    */
   public AttackResult(AttackRoll attackRoll, DefenseRoll defenseRoll) {
@@ -51,7 +51,7 @@ public class AttackResult {
   /**
    * sets amount of attacking troops lost mainly for test purpose.
    *
-   * @param attackingTroopsLost.
+   * @param attackingTroopsLost troops lost on attacker-side
    * @author lkuech.
    */
   public void setAttackingTroopsLost(int attackingTroopsLost) {

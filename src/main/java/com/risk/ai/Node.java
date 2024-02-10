@@ -51,7 +51,7 @@ public class Node implements Comparable {
    */
   public Node(GameState gameState, int depth) {
     if (gameState == null) {
-      throw new IllegalArgumentException("GameState darf nicht null sein");
+      throw new IllegalArgumentException("GameState can't be null");
     }
     this.gameState = gameState;
     this.parent = null;
@@ -73,7 +73,7 @@ public class Node implements Comparable {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("Angreifer ").append(this.gameState.getCurrentPlayerKey()).append(" ");
+    sb.append("Attacker ").append(this.gameState.getCurrentPlayerKey()).append(" ");
     if (this.startCountry != null) {
       sb.append("Move: ").append(this.startCountry.getName()).append(" -> ");
     } else {

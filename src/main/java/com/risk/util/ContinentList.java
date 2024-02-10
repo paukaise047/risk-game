@@ -21,7 +21,7 @@ public class ContinentList {
     northAmerica = new Continent("NorthAmerica", false, null);
     southAmerica = new Continent("SouthAmerica", false, null);
 
-    allContinents = new ArrayList<Continent>();
+    allContinents = new ArrayList<>();
     allContinents.add(europa);
     allContinents.add(asia);
     allContinents.add(africa);

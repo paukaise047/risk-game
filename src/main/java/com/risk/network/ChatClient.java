@@ -23,8 +23,8 @@ public class ChatClient extends Thread {
   private final String username;
   private final User user = User.getUser();
   private final ArrayList<String[]> chatMessageHistory = new ArrayList<>();
-  private final String[] chatNachricht =
-      new String[3]; // [0] = message, [1] = username, [2] = userkey
+  private final String[] chatMessage =
+      new String[3]; // [0] = message, [1] = username, [2] = userKey
   private Socket chatClientSocket;
   private boolean running;
   private ObjectOutputStream objectOutputStream;
@@ -183,7 +183,7 @@ public class ChatClient extends Thread {
   }
 
   /**
-   * Returns the userkey of Person who runs the ChatClient.
+   * Returns the userKey of Person who runs the ChatClient.
    *
    * @return username
    * @author lgreiner

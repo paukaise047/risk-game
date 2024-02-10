@@ -202,7 +202,7 @@ public class Server implements Runnable {
   }
 
   /**
-   * This method brodcasts a message to all clients.
+   * This method broadcasts a message to all clients.
    *
    * @author lkuech
    * @msg - Message that is sent to the server
@@ -284,7 +284,6 @@ public class Server implements Runnable {
    * @author floribau
    */
   public void determineBeginner() {
-    //TODO delete sout
     int max = -1;
     for (ConnectionHandler ch : this.connections) {
       int diceResult = com.risk.objects.dice.Dice.roll();

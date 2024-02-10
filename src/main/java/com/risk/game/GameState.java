@@ -873,7 +873,7 @@ public class GameState implements Serializable {
       }
 
       for (Player player : this.players) {
-        Player newPlayer = new Player(player.getName(), player.getUserKey(), player.isAiplayer());
+        Player newPlayer = new Player(player.getName(), player.getUserKey(), player.isAIPlayer());
         newPlayer.setPlayerNumber(player.getPlayerNumber());
         newPlayer.setPlayerColour(player.getPlayerColour());
         gs.players.add(newPlayer);

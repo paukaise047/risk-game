@@ -7,6 +7,6 @@ package com.risk.database;
  */
 public class Parameters {
 
-  public static final String sep = System.getProperty("file.seperator");
-  public static final String userdir = System.getProperty("user.dir");
+  public static final String SEP = System.getProperty("file.separator");
+  public static final String USER_DIR = System.getProperty("user.dir");
 }

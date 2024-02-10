@@ -43,7 +43,7 @@ public class LoginController {
       Alert alert = new Alert(AlertType.ERROR);
       alert.setTitle("Error");
       alert.setContentText(
-          "Account existiert nicht oder Username und Passwort stimmen nicht überein!");
+          "Account doesn't exist or Username and Password don't match!");
       alert.showAndWait();
        */
     } else {

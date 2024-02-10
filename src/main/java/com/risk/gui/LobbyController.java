@@ -162,7 +162,7 @@ public class LobbyController implements Initializable {
   }
 
   /**
-   * intialize method for the controller.
+   * initialize method for the controller.
    * @param url
    * The location used to resolve relative paths for the root object, or
    * {@code null} if the location is not known.
@@ -189,7 +189,7 @@ public class LobbyController implements Initializable {
   }
 
   /**
-   * Method that switches to the view where you can join a lobby by entering the adress and port.
+   * Method that switches to the view where you can join a lobby by entering the address and port.
    *
    * @param event ActionEvent that triggers the method
    * @author lkuech
@@ -267,7 +267,7 @@ public class LobbyController implements Initializable {
   }
 
   /**
-   * Method that switches to the view where you can join a lobby by entering the adress and port.
+   * Method that switches to the view where you can join a lobby by entering the address and port.
    * @param event ActionEvent that triggers the method
    * @author lkuech
    */
@@ -348,7 +348,7 @@ public class LobbyController implements Initializable {
    * @param event ActionEvent that triggers the method
    * @author lkuech
    */
-  public void searchAllLobbys(ActionEvent event) {
+  public void searchAllLobbies(ActionEvent event) {
     try {
 
       MultiCastReceiver mr = new MultiCastReceiver();
@@ -422,7 +422,7 @@ public class LobbyController implements Initializable {
   }
 
   /**
-   * joines the player to the ranked queue and searches for a lobby with a similar elo.
+   * joins the player to the ranked queue and searches for a lobby with a similar elo.
    * @param event the event that triggered the method
    * @throws IOException if the fxml file can't be found
    * @author lkuech
@@ -500,7 +500,7 @@ public class LobbyController implements Initializable {
   }
 
   /**
-   * Methid that joines the lobby that was searched for.
+   * Method that joins the lobby that was searched for.
    * @param event the event that triggered the method
    * @author floribau
    */

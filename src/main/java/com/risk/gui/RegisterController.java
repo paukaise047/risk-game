@@ -37,7 +37,7 @@ public class RegisterController {
    * @author vstoll
    */
   @FXML
-  protected void switchtoLoginScene(ActionEvent event) throws IOException {
+  protected void switchToLoginScene(ActionEvent event) throws IOException {
     Parent root = FXMLLoader.load(getClass().getResource("/LoginScene.fxml"));
     stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
     scene = new Scene(root);
@@ -49,7 +49,7 @@ public class RegisterController {
 
   /**
    * This method tries to create a user from the values enter into the text boxes. If not possible
-   * it gives an explainotory error message.
+   * it gives an explanatory error message.
    *
    * @param event ActionEvent that triggers the method
    * @throws IOException if the FXML file is not found
@@ -85,7 +85,7 @@ public class RegisterController {
   }
 
   /**
-   * Pops up a window if the registration was succesful
+   * Pops up a window if the registration was successful
    * @param username the username registered with
    * @author vstoll
    */

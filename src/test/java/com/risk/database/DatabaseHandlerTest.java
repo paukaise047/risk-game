@@ -111,7 +111,7 @@ class DatabaseHandlerTest {
   void changeUsernameInDBTest() {
     setUp();
     db.writeUserToDb(username, password);
-    db.changeUsernamedInDb(username, newUsername);
+    db.changeUsernameInDb(username, newUsername);
     assertTrue(db.checkUsernameExistence(newUsername));
     db.deleteUser(newUsername);
   }

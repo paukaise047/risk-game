@@ -4,7 +4,8 @@ import java.io.Serializable;
 
 /**
  * This class represents a Placement. A Placement has a country and an amount of troops that are
- * being placed on the country. @Author lkuech.
+ * being placed on the country.
+ * @author lkuech.
  */
 public class Placement implements Serializable {
 

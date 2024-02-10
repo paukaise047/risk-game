@@ -103,7 +103,7 @@ public class TradeCardsPhase extends Phase {
   }
 
   /**
-   * Method that sets the cardsTrunedIn.
+   * Method that sets the cardsTurnedIn.
    * @author hneumann
    */
   public void tradeAiCards() {

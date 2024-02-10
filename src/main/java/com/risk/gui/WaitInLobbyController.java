@@ -150,7 +150,6 @@ public class WaitInLobbyController implements Initializable {
     scene.getStylesheets().add(getClass().getResource(
         "/applicationStyle.css").toExternalForm());
     stage.show();
-    // TODO debuggen: warum wird der Server hier nicht richtig geschlossen?
 
     stage.setOnCloseRequest(
         e -> {
@@ -176,7 +175,7 @@ public class WaitInLobbyController implements Initializable {
       chatStage.setTitle("Chat");
       chatStage.setScene(chatScene);
       chatStage.initModality(Modality.APPLICATION_MODAL);
-      // todo position anpassen
+      // todo add position
       // chatStage.setX(640);
       // chatStage.setY(270);
       chatStage.show();
@@ -254,9 +253,9 @@ public class WaitInLobbyController implements Initializable {
     ipAdressText.setText("IP: " + user.getClient().getGameServerIP());
     portText.setText("Port: " + user.getClient().getGameServerPort());
     startGameButton.setVisible(false);
-    ArrayList<String> namelist = new ArrayList<>();
-    namelist.add(user.getUsername());
-    updateUsernamesInLobby(namelist);
+    ArrayList<String> nameList = new ArrayList<>();
+    nameList.add(user.getUsername());
+    updateUsernamesInLobby(nameList);
     user.getClient().setWaitInLobbyController(this);
     enoughPlayersToStart();
     if (user.getServer() != null) {

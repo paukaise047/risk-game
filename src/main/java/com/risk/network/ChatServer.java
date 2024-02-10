@@ -84,7 +84,7 @@ public class ChatServer extends Thread {
   /**
    * Broadcasts a message to all connected clients.
    *
-   * @param message - the message to be broadcasted
+   * @param message - the message to be broadcast
    * @author floribau
    */
   public void broadcast(Message message) {

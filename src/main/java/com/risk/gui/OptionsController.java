@@ -101,7 +101,7 @@ public class OptionsController {
     if (result.isPresent() && !result.get().equals("")) {
       String newUsername = result.get();
       DatabaseHandler db = new DatabaseHandler();
-      db.changeUsernamedInDb(user.getUsername(), newUsername);
+      db.changeUsernameInDb(user.getUsername(), newUsername);
       user.setUsername(newUsername);
     } else {
       Alert alert =

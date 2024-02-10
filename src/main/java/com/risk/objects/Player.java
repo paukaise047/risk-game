@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * This class represents a Player. A Player has a name, a list of countries, a list of continents, a
- * list of cards and a boolean indicating weather this player is an ai (true) or human (false).
+ * list of cards and a boolean indicating weather this player is an AI (true) or human (false).
  *
  * @author floribau, hneumann, lkuech.
  */
@@ -20,7 +20,7 @@ public class Player implements Serializable {
    *
    * @param name - name of the Player.
    * @param userKey - key identifying User, Client and Player.
-   * @param isAiPlayer - boolean indicates weather this player is an ai (true) or human (false).
+   * @param isAiPlayer - boolean indicates weather this player is an AI (true) or human (false).
    * @author floribau.
    */
   public Player(String name, String userKey, boolean isAiPlayer) {
@@ -101,7 +101,7 @@ public class Player implements Serializable {
    * @return true if Ai player, false if human.
    * @author floribau.
    */
-  public boolean isAiplayer() {
+  public boolean isAIPlayer() {
     return this.isAiPlayer;
   }
 
@@ -114,8 +114,7 @@ public class Player implements Serializable {
    */
   public boolean equals(Player c) {
     // TODO check if this is enough or the right approach
-    boolean equals = this.userKey.equals(c.getUserKey()) && this.name.equals(c.getName());
-    return equals;
+    return this.userKey.equals(c.getUserKey()) && this.name.equals(c.getName());
   }
 
   /**

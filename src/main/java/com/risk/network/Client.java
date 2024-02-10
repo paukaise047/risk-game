@@ -63,8 +63,8 @@ public class Client extends Thread {
    *
    * @param gameServerIP   IP of the game server
    * @param gameServerPort port of the game server
-   * @param userKey        user key
-   * @param userName       user name
+   * @param userKey        userKey
+   * @param userName       username
    * @author lgreiner
    */
   public Client(String gameServerIP, int gameServerPort, String userKey, String userName) {
@@ -77,7 +77,7 @@ public class Client extends Thread {
   }
 
   /**
-   * returns Userkey.
+   * returns userKey.
    *
    * @author floribau
    */
@@ -89,7 +89,7 @@ public class Client extends Thread {
    * This method returns the controller of the WaitInLobbyScene
    *
    * @return WaitInLobbyController
-   * @Author floribau
+   * @author floribau
    */
   public WaitInLobbyController getWaitInLobbyController() {
     return this.waitInLobbyController;
@@ -152,7 +152,7 @@ public class Client extends Thread {
       // ignore
     }
     while (running) {
-      // To-Do Multicast
+      // Todo multicast
 
     }
 
@@ -169,7 +169,7 @@ public class Client extends Thread {
   }
 
   /**
-   * Returns IP of Gameserver.
+   * Returns IP of gameServer.
    *
    * @author lgreiner
    */
@@ -178,7 +178,7 @@ public class Client extends Thread {
   }
 
   /**
-   * Returns Port of Gameserver.
+   * Returns Port of gameServer.
    *
    * @author lgreiner
    */
@@ -224,7 +224,7 @@ public class Client extends Thread {
   }
 
   /**
-   * This method handles the GameOverMesssage sent by the server.
+   * This method handles the GameOverMessage sent by the server.
    *
    * @param message the message received
    * @author lkuech
@@ -242,14 +242,14 @@ public class Client extends Thread {
   /**
    * This method handles the TestMessage sent by the server.
    *
-   * @param message the message recieved
+   * @param message the message received
    * @author hneumann
    */
   private void handleTestMessage(Message message) {
   }
 
   /**
-   * This method handles the ServerShutdownMessage sent by the server. It will shutdown the client.
+   * This method handles the ServerShutdownMessage sent by the server. It will shut down the client.
    *
    * @author floribau
    */
@@ -272,7 +272,7 @@ public class Client extends Thread {
    * Handler method for the PlayersReadyUpdateMessage. This method will update the GUI of the
    * WaitInLobbyScene.
    *
-   * @param msg the message recieved from the server
+   * @param msg the message received from the server
    * @author floribau
    */
   private void handlePlayersReadyUpdateMessage(Message msg) {
@@ -328,7 +328,7 @@ public class Client extends Thread {
    * This method handles the DistributionRequest. It creates a new DistributionPhase and sends the
    * DistributionMessage to the server.
    *
-   * @param message the message recieved
+   * @param message the message received
    * @author floribau & lgreiner
    */
   private void handleDistributionRequest(Message message) {

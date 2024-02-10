@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * This class represents the dice rolled for an attack. It saves the highest and second-highest
- * rolled value. If only one dice was rolled, the second value is -1.
+ * rolled value. If only one die was rolled, the second value is -1.
  *
  * @author lkuech.
  */
@@ -14,7 +14,7 @@ public class AttackRoll {
   private final int secondValue;
 
   /**
-   * Creating a new instance of AttackRoll by rolling the amount of dice necassary for the amount of
+   * Creating a new instance of AttackRoll by rolling the amount of dice necessary for the amount of
    * troops and saving the highest one or two values in the class variables.
    *
    * @param troopAmount - the amount of troops attacking.
@@ -70,10 +70,10 @@ public class AttackRoll {
   }
 
   /**
-   * Returns the second highest rolled value as an integer. If only one dice was rolled, it returns
+   * Returns the second-highest rolled value as an integer. If only one die was rolled, it returns
    * -1.
    *
-   * @return the second highest rolled value as an integer.
+   * @return the second-highest rolled value as an integer.
    * @author lkuech.
    */
   public int getSecondValue() {

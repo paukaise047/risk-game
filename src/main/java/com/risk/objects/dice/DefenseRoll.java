@@ -13,7 +13,7 @@ public class DefenseRoll {
   private final int secondValue;
 
   /**
-   * Creates a new entity of DefenseRole by simulting the dice rolls for the existing troops and
+   * Creates a new entity of DefenseRole by simulating the dice rolls for the existing troops and
    * saving the highest or highest two values in the class variables.
    *
    * @param troopAmount the amount of troops that are defending the country.
@@ -66,9 +66,9 @@ public class DefenseRoll {
   }
 
   /**
-   * This method returns the second highest rolled value as an integer.
+   * This method returns the second-highest rolled value as an integer.
    *
-   * @return the second highest rolled value as an integer.
+   * @return the second-highest rolled value as an integer.
    * @author lkuech.
    */
   public int getSecondValue() {

@@ -101,7 +101,7 @@ class AiPlayerTest {
     try {
       AiPlayer aiPlayer = new AiPlayer("testAI", User.generateKey(), 3);
       assertEquals("testAI", aiPlayer.getName());
-      assertEquals(true, aiPlayer.isAiplayer());
+      assertEquals(true, aiPlayer.isAIPlayer());
 
       AiPlayer player1 = new AiPlayer("HannesAI", User.generateKey(), 3);
       AiPlayer player2 = new AiPlayer("AISPieler2", User.generateKey(), 3);

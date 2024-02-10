@@ -79,7 +79,7 @@ public class AttackMoveMessage extends Message {
   /**
    * getter method for the defending countryTroops.
    *
-   * @return number of contryTroops
+   * @return number of countryTroops
    * @author lkuech
    */
   public int getDefendingCountryTroops() {

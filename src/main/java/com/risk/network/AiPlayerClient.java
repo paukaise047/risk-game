@@ -59,7 +59,7 @@ public class AiPlayerClient extends Thread {
   private int attackCounter = 0;
 
   /**
-   * Constructor of Clients in wich the IP-Address and Port gets set for the connection to.
+   * Constructor of Clients in which the IP-Address and Port gets set for the connection to.
    *
    * @param gameServerIP IP-Address of the Server
    * @param gameServerPort Port of the Server
@@ -84,7 +84,7 @@ public class AiPlayerClient extends Thread {
   }
 
   /**
-   * Mehtod that handles the incomin message from the server and calls the corresponding method
+   * Method that handles the incoming message from the server and calls the corresponding method
    * based on the message type.
    *
    * @param message Message from the server that needs to be handled by the client
@@ -107,7 +107,7 @@ public class AiPlayerClient extends Thread {
     }
   }
   /**
-   * Method that handles the incoming UpdatedGameStateMessage and updates the gamestate in AIPlayer.
+   * Method that handles the incoming UpdatedGameStateMessage and updates the gameState in AIPlayer.
    *
    * @param message UpdatedGameStateMessage
    * @author hneumann
@@ -130,7 +130,7 @@ public class AiPlayerClient extends Thread {
   }
 
   /**
-   * Handles the GameStateMessage and updates the gamestate in AIPlayer.
+   * Handles the GameStateMessage and updates the gameState in AIPlayer.
    *
    * @param message GameStateMessage
    * @author hneumann
@@ -154,7 +154,6 @@ public class AiPlayerClient extends Thread {
    * @author hneumann
    */
   private void handleWelcomeMessage(Message message) {
-    // TODO sout entfernen
     sendMessage(new UserInfoMessage(userKey, userName, true));
   }
 
@@ -168,7 +167,7 @@ public class AiPlayerClient extends Thread {
   private void handleDistributionRequest(Message message) {
     Time time = new Time(System.currentTimeMillis());
     long now = time.getTime();
-    // TODO Zeit anpassen
+    // TODO change to correct time
     while (now + 600 > time.getTime()) {
       time = new Time(System.currentTimeMillis());
     }
@@ -344,8 +343,7 @@ public class AiPlayerClient extends Thread {
    * @author hneumann
    */
   private void handleMoveTroopsRequest(Message message) {
-    // TODO sout entfernen
-    this.attackCounter = 0; // reset count um nächste Runde wieder dreimal angreifen zu können
+    this.attackCounter = 0; // reset count to be able to attack three times next round
 
     Time now = new Time(System.currentTimeMillis());
     long time = now.getTime();
@@ -390,7 +388,8 @@ public class AiPlayerClient extends Thread {
   /**
    * returns the String gameServerIP.
    *
-   * @return String gameServerIP @Author hneumann
+   * @return String gameServerIP
+   * @author hneumann
    */
   public String getGameServerIP() {
     return this.gameServerIP;
@@ -399,7 +398,8 @@ public class AiPlayerClient extends Thread {
   /**
    * returns the Player.
    *
-   * @return Player player @Author hneumann
+   * @return Player
+   * @author hneumann
    */
   public Player getPlayer() {
     return this.player;
