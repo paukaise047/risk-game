@@ -1,7 +1,6 @@
 package com.risk.gui;
 
 import com.risk.main.User;
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
@@ -29,7 +28,6 @@ public class MenuController implements Initializable {
   private Stage stage;
   private Scene scene;
   private Parent root;
-  private javafx.scene.media.MediaPlayer mediaPlayer;
 
   /**
    * Method that switches to the MenuScene.
@@ -131,7 +129,6 @@ public class MenuController implements Initializable {
    */
   @FXML
   protected void switchToLobbyScene(ActionEvent event) throws IOException {
-    stopBackgroundMusic();
     Parent root = FXMLLoader.load(getClass().getResource("/LobbyScene.fxml"));
     stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
     scene = new Scene(root);
@@ -139,33 +136,6 @@ public class MenuController implements Initializable {
     scene.getStylesheets().clear();
     scene.getStylesheets().add(getClass().getResource("/applicationStyle.css").toExternalForm());
     stage.show();
-  }
-
-  /**
-   * Method that plays background music.
-   *
-   * @author paukaise
-   */
-  @FXML
-  public void playBackgroundMusic() {
-    if (mediaPlayer == null) {
-      File file = new File("src/main/ressources/mp3/menuBackgroundMusic.mp3");
-      javafx.scene.media.Media media = new javafx.scene.media.Media(file.toURI().toString());
-      mediaPlayer = new javafx.scene.media.MediaPlayer(media);
-      mediaPlayer.play();
-    }
-  }
-
-  /**
-   * Method that stops background music.
-   *
-   * @author paukaise
-   */
-  @FXML
-  protected void stopBackgroundMusic() {
-    if (mediaPlayer != null) {
-      mediaPlayer.stop();
-    }
   }
 
   /**
@@ -194,18 +164,6 @@ public class MenuController implements Initializable {
       System.exit(0);
     } else {
       // ... user chose CANCEL or closed the dialog
-    }
-  }
-
-  /**
-   * Method that makes sure that the background music is only played once.
-   *
-   * @author paukaise
-   */
-  public void playMusicOnlyOnce() {
-    if (!methodCalled) {
-      playBackgroundMusic();
-      methodCalled = true;
     }
   }
 
