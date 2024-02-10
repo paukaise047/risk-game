@@ -999,7 +999,7 @@ public class GameController implements Initializable {
           avTroopsText.setText(String.valueOf(troops));
           alertPane.setVisible(true);
           PauseTransition visiblePause =
-              new PauseTransition(Duration.seconds(5)); // Set the duration to 3 seconds //TODO change duration
+              new PauseTransition(Duration.seconds(3)); // Set the duration to 3 seconds
           visiblePause.setOnFinished(event -> alertPane.setVisible(false));
           visiblePause.play();
         });

@@ -928,9 +928,9 @@
                         <Image url="@pictures/talking_monkey.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="avTroopsText" layoutX="211.0" layoutY="144.0" rotate="-2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" textAlignment="CENTER" wrappingWidth="77.33333333333326">
+                  <Text fx:id="avTroopsText" layoutX="230.0" layoutY="100.0" rotate="-2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" textAlignment="CENTER" wrappingWidth="77.33333333333326">
                      <font>
-                        <Font size="48.0" />
+                        <Font size="45.0" />
                      </font></Text>
                   <Button fx:id="closeAlertSceneButton" layoutX="-1.0" layoutY="2.0" mnemonicParsing="false" prefHeight="281.0" prefWidth="500.0" style="-fx-background-color: transparent;" />
                </children>
