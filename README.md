@@ -1,51 +1,47 @@
-# Risk-game
+# risk-game
 
-
-
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
 
 ## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+Risk is a popular boardgame with the goal to conquer the whole world. During a university-project, we implemented a video game version of Risk. We aimed to keep all essential rules of the game while making some adjustments to the rulebook. This way we adapted to the special requirements of video games and improved the UX. The game can be played as an online multiplayer game (as long as all payers are connected to the same network) or as an offline game with AI players (with various difficulty levels).
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+## Installation and usage
+The Project is built with Java 19 as part of Oracle JDK 19. The project uses Maven for dependency and build management. Notable dependencise required for the application to run properly are JavaFx by openjfx, JUnit, and Mockito.
+After installing Maven, run 'mvn install' in your Command Line to assemble the JAR file. When completed, you can execute the JAR file in the 'target' folder.
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+## Structure
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+### ai package
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+The ai package includes classes for generating and executing AI moves, as well as classes for evaluating the game state und determining the best moves to make.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+### database package
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+The database package contains the code for storing and retrieving game data. This includes classes for reading and writing game data to an SQL file, as well as interacting with the database. The database is used to track and store player accounts and statistics.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+### game package
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+The game package contains the code for managing the game state. This includes classes for initializing the game, executing game actions, and determining when the game is over.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+### gamePhases package
+
+The gamePhases package contains the code for the five game phases and their sub-phases. The phases are initially claiming countries, exchanging cards, placing troops, attacking, and moving troops. Each phase has a class assigned to it, which is responsible for managing the actions that can be taken during that ühase. Phases 2-5 occur in each round whereas phase 1 only occurs at the very beginning of the game
+
+### gui package
+
+The gui package contains the controllers for the graphical user interface. This includes classes for displaying the game board, the game state, and handling user inputs.
+
+### network package
+
+The network package contains the code for multiplayer games via the network. This includes classes for sending and receiving messages over the network, and classes for managing multiple players in a networke game.
 
 ## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+As this was a group-project, I don't take credit for all of the code. My main topics were the Client-Server architecture, the game logic, the database connection, and the final main integration of all parts. Since the original repository has been deleted and I had to manually insert our code into this repository, I couldn't preserve the actual contributions.  
+The other authors are:
+- Hannes Neumann
+- Leonard Küch ([@leonardkuech](https://github.com/leonardkuech))
+- Lukas Greiner
+- Paul Kaiser
+- Valentin Stoll
 
 ## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+All images used in the project are free of copyright and royalty. The images as well as the project as a whole may not be used or sold in any commercial way.
