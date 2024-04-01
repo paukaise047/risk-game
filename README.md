@@ -1,11 +1,11 @@
-# risk-game
+# Risk
 
 
 ## Description
 Risk is a popular boardgame with the goal to conquer the whole world. During a university-project, we implemented a video game version of Risk. We aimed to keep all essential rules of the game while making some adjustments to the rulebook. This way we adapted to the special requirements of video games and improved the UX. The game can be played as an online multiplayer game (as long as all payers are connected to the same network) or as an offline game with AI players (with various difficulty levels).
 
 ## Installation and usage
-The Project is built with Java 19 as part of Oracle JDK 19. The project uses Maven for dependency and build management. Notable dependencise required for the application to run properly are JavaFx by openjfx, JUnit, and Mockito.
+The Project is built with Java 19. The project uses Maven for dependency and build management. Notable dependencise required for the application to run properly are JavaFx by openjfx, JUnit, and Mockito.
 After installing Maven, run 'mvn install' in your Command Line to assemble the JAR file. When completed, you can execute the JAR file in the 'target' folder.
 
 ## Structure
