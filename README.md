@@ -35,12 +35,12 @@ The gui package contains the controllers for the graphical user interface. This 
 The network package contains the code for multiplayer games via the network. This includes classes for sending and receiving messages over the network, and classes for managing multiple players in a networke game.
 
 ## Authors and acknowledgment
-As this was a group-project, I don't take credit for all of the code. My main topics were the Client-Server architecture, the game logic, the database connection, and the final main integration of all parts. Since the original repository has been deleted and I had to manually insert our code into this repository, I couldn't preserve the actual contributions.  
+As this was a group-project, I don't take credit for all of the code. My main topics were the UX/UI Design of the game. Since the original repository has been deleted and I had to manually insert our code into this repository, I couldn't preserve the actual contributions.  
 The other authors are:
 - Hannes Neumann
 - Leonard Küch ([@leonardkuech](https://github.com/leonardkuech))
 - Lukas Greiner
-- Paul Kaiser
+- Florian Bauer ([@floribau])
 - Valentin Stoll
 
 ## License
