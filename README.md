@@ -40,7 +40,7 @@ The other authors are:
 - Hannes Neumann
 - Leonard Küch ([@leonardkuech](https://github.com/leonardkuech))
 - Lukas Greiner
-- Florian Bauer ([@floribau])
+- Florian Bauer ([@floribau](https://github.com/floribau))
 - Valentin Stoll
 
 ## License
